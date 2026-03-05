@@ -16,35 +16,21 @@
     .nav-links a:hover{color:var(--accent)}
     .page{display:none}.page.active{display:block}
     .home-grid{display:grid;grid-template-columns:260px 1fr;min-height:calc(100vh - 58px)}
-    .sidebar{background:var(--sand);border-right:1px solid var(--border);padding:48px 32px;display:flex;flex-direction:column;gap:40px}
-    .avatar-wrap {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 3px solid var(--border);
-}
-.avatar-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-.sidebar-name{font-family:'Playfair Display',serif;font-size:1.3rem;line-height:1.3;margin-bottom:4px}
-.sidebar-title{font-size:.8rem;color:var(--muted);line-height:1.5}
-.sidebar-section h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:12px}
-.sidebar-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-.sidebar-links li,.sidebar-links a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-size:.88rem;transition:color .2s}
-.sidebar-links a:hover{color:var(--accent)}
-.icon{width:20px;height:20px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.interests-list{list-style:none;display:flex;flex-direction:column;gap:6px}
-.interests-list li{font-size:.88rem;padding:4px 10px;background:white;border-radius:20px;border:1px solid var(--border)}
-.main-content{padding:64px 72px}
-.section-tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:10px}
-.section-heading{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;margin-bottom:20px;line-height:1.2}
+    .sidebar{background:var(--sand);border-right:1px solid var(--border);padding:48px 32px;display:flex;flex-direction:column;gap:32px}
+    .avatar-wrap{width:130px;height:130px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--border)}
+    .avatar-img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
+    .sidebar-name{font-family:'Playfair Display',serif;font-size:1.3rem;line-height:1.3;margin-bottom:4px}
+    .sidebar-title{font-size:.8rem;color:var(--muted);line-height:1.5}
+    .sidebar-section h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:12px}
+    .sidebar-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .sidebar-links li,.sidebar-links a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-size:.88rem;transition:color .2s}
+    .sidebar-links a:hover{color:var(--accent)}
+    .icon{width:20px;height:20px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .interests-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+    .interests-list li{font-size:.88rem;padding:4px 10px;background:white;border-radius:20px;border:1px solid var(--border)}
+    .main-content{padding:64px 72px}
+    .section-tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:10px}
+    .section-heading{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;margin-bottom:20px;line-height:1.2}
     .about-text p{color:#3a3530;margin-bottom:16px;font-size:.97rem}
     .divider{border:none;border-top:1px solid var(--border);margin:48px 0}
     .edu-grid{display:flex;flex-direction:column;gap:20px}
@@ -99,17 +85,22 @@
 <!-- HOME -->
 <div id="home" class="page active">
   <div class="home-grid">
+
     <aside class="sidebar">
-    <div class="avatar-wrap">
-      <img src="images-profile.jpeg" alt="Jhanavi Sankar" class="avatar-img">
-    </div>
+      <div class="avatar-wrap">
+        <img src="images-profile.jpg" alt="Jhanavi Sankar" class="avatar-img">
+      </div>
+      <div>
         <div class="sidebar-name">Jhanavi Sankar</div>
         <div class="sidebar-title">Graduate Student @ Carnegie Mellon University · Heinz College</div>
+      </div>
+      <div class="sidebar-section">
+        <h4>Connect</h4>
         <ul class="sidebar-links">
-            <li><span class="icon">📍</span>Pittsburgh, PA</li>
-            <li><a href="mailto:jsankar@andrew.cmu.edu"><span class="icon">✉️</span>jsankar@andrew.cmu.edu</a></li>
-            <li><a href="https://www.linkedin.com/in/jhanavisankar" target="_blank"><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>LinkedIn</a></li>
-            <li><a href="https://github.com/jhsankar" target="_blank"><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="#1a1a2e"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>GitHub</a></li>
+          <li><span class="icon">📍</span>Pittsburgh, PA</li>
+          <li><a href="mailto:jsankar@andrew.cmu.edu"><span class="icon">✉️</span>jsankar@andrew.cmu.edu</a></li>
+          <li><a href="https://www.linkedin.com/in/jhanavisankar" target="_blank"><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>LinkedIn</a></li>
+          <li><a href="https://github.com/jhsankar" target="_blank"><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="#1a1a2e"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>GitHub</a></li>
         </ul>
       </div>
       <div class="sidebar-section">
@@ -125,11 +116,11 @@
 
     <main class="main-content">
       <p class="section-tag">About Me</p>
-      <h1 class="section-heading">Hello!</h1>
+      <h1 class="section-heading">Hello! 👋</h1>
       <div class="about-text">
-        <p>I'm Jhanavi Sankar, a public policy and data professional with a passion for turning complex data into actionable insights that drive equitable outcomes. I’m a CMU Heinz graduate student, focused on how data and emerging technologies can improve public outcomes—especially in education, workforce development, and responsible AI policy.</p>
-        <p>My work is grounded in applied problem-solving: building analytics workflows, evaluating programs, and creating dashboards and decision tools that stakeholders can actually use. I’ve worked on projects spanning student support systems (MTSS), education program evaluation, and workforce analytics, often bridging quantitative analysis with real-world constraints such as imperfect data, implementation gaps, and policy trade-offs.</p>
-        <p>In this portfolio, you’ll see projects that show my approach. I begin with a clear question, use a straightforward method, and share results in plain language so the analysis can lead to real action.</p>
+        <p>I'm Jhanavi Sankar, a public policy and data professional with a passion for turning complex data into actionable insights that drive equitable outcomes. I'm a CMU Heinz graduate student, focused on how data and emerging technologies can improve public outcomes—especially in education, workforce development, and responsible AI policy.</p>
+        <p>My work is grounded in applied problem-solving: building analytics workflows, evaluating programs, and creating dashboards and decision tools that stakeholders can actually use. I've worked on projects spanning student support systems (MTSS), education program evaluation, and workforce analytics, often bridging quantitative analysis with real-world constraints such as imperfect data, implementation gaps, and policy trade-offs.</p>
+        <p>In this portfolio, you'll see projects that show my approach. I begin with a clear question, use a straightforward method, and share results in plain language so the analysis can lead to real action.</p>
         <p>I hold a B.A. (Honors) in Sociology and History from Lady Shri Ram College, Delhi University, grounding my quantitative work in a deep understanding of social systems and equity.</p>
       </div>
 
@@ -144,7 +135,7 @@
           <div class="year">May 2026 · GPA 3.90</div>
         </div>
         <div class="edu-card">
-          <div class="degree">B.A. (Honors) in Sociology</div>
+          <div class="degree">B.A. (Honors) in Sociology and History</div>
           <div class="school">Lady Shri Ram College, Delhi University · New Delhi, India</div>
           <div class="year">June 2021</div>
         </div>
@@ -154,53 +145,59 @@
 
       <p class="section-tag">Experience</p>
       <h2 class="section-heading" style="font-size:1.5rem;margin-bottom:28px">Professional & Research Work</h2>
+      <div class="exp-list">
+
         <div class="exp-item">
           <div class="exp-date">Aug 2025 – Present</div>
           <div class="exp-body">
             <div class="role">Research Assistant</div>
-            <div class="org">Plus, Personalized Learning, Carnegie Mellon University </div>
+            <div class="org">Plus, Personalized Learning, Carnegie Mellon University</div>
             <ul>
-              <li>Managed and cleaned large K–12 tutoring, usage, and assessment datasets in R to build an analysis-ready pipeline for an AI-enabled tutoring evaluation, enabling consistent tracking of student participation, lesson completion, and time-on-task across schools and program sites.</li>
+              <li>Managed and cleaned large K–12 tutoring, usage, and assessment datasets in R to build an analysis-ready pipeline for an AI-enabled tutoring evaluation.</li>
               <li>Analyzed tutoring impacts using regression and regression discontinuity designs, producing models with R² = 0.60–0.85 to assess the relationship between tutoring exposure and student performance.</li>
-              <li>Translated findings into clear research notes, visualizations, and summaries for supervisors, helping turn complex quantitative results into actionable insights for tutoring strategy and implementation.</li>
+              <li>Translated findings into clear research notes, visualizations, and summaries to support tutoring strategy and implementation decisions.</li>
             </ul>
           </div>
         </div>
+
         <div class="exp-item">
           <div class="exp-date">Jun – Aug 2025</div>
           <div class="exp-body">
             <div class="role">Data and Reporting Analyst (Power BI)</div>
             <div class="org">Pittsburgh Public Schools</div>
             <ul>
-              <li>Co-managed SQL pipelines and reporting logic across 4 administrative datasets totaling 5M+ rows, performing data validation, reconciliation, and quality assurance checks to ensure reliable MTSS reporting for student-support planning and resource allocation across 54 schools.</li>
-              <li>Built Power BI dashboards and recurring reports on attendance, GPA, assessment results, and early warning indicators, enabling teachers and principals across 54 schools to identify at-risk students faster and target interventions more effectively</li>
-              <li>Developed 3 stakeholder insight reports that translated complex district and school-level data into digestible summaries, helping school leaders interpret trends quickly and make informed decisions on student support needs.</li>
+              <li>Co-managed SQL pipelines and reporting logic across 4 administrative datasets totaling 5M+ rows, performing data validation and quality assurance for MTSS reporting across 54 schools.</li>
+              <li>Built Power BI dashboards on attendance, GPA, assessment results, and early warning indicators, enabling teachers and principals to identify at-risk students faster and target interventions more effectively.</li>
+              <li>Developed 3 stakeholder insight reports translating complex district data into digestible summaries for school leadership decision-making.</li>
             </ul>
           </div>
         </div>
+
         <div class="exp-item">
           <div class="exp-date">Jun – Aug 2025</div>
           <div class="exp-body">
             <div class="role">Policy and Advocacy Intern</div>
             <div class="org">Friends of the Riverfront</div>
             <ul>
-              <li>Monitored and analyzed legislative and regulatory developments affecting land use, water access, trail infrastructure, and environmental policy, tracking bills, agency actions, and local government decisions to provide timely policy updates that enabled more informed partner response.</li>
-              <li>Led outreach and relationship-management efforts across 130 municipalities, gathering and organizing stakeholder input on policy priorities to support more targeted advocacy on riverfront and trail-related issues.</li>
+              <li>Monitored legislative and regulatory developments affecting land use, water access, and trail infrastructure, providing timely policy updates to enable informed partner response.</li>
+              <li>Led outreach across 130 municipalities, gathering stakeholder input to support targeted advocacy on riverfront and trail-related issues.</li>
             </ul>
           </div>
         </div>
+
         <div class="exp-item">
           <div class="exp-date">May 2022 – May 2024</div>
           <div class="exp-body">
             <div class="role">Fellow Advisor & Fellow</div>
             <div class="org">Teach for India</div>
             <ul>
-              <li>Developed 20+ capacity-building resources and equity-focused briefs for 50+ educators, equipping teachers with practical tools and actionable guidance to strengthen inclusive instruction and better support diverse student learning needs.</li>
-              <li>Designed and facilitated team-building and leadership development workshops for educator cohorts, increasing communication effectiveness by 80% and strengthening collaboration, problem-solving, and collective decision-making</li>
-              <li>Selected to support state curriculum revision efforts by developing 80+ literacy resources for middle school grades (5–8), contributing to statewide implementation that supported an average of 1.5 grade-level gains in reading outcomes for students</li>
+              <li>Developed 20+ capacity-building resources and equity-focused briefs for 50+ educators, equipping teachers with practical tools for inclusive instruction.</li>
+              <li>Designed and facilitated leadership development workshops, increasing team communication effectiveness by 80%.</li>
+              <li>Selected to support state curriculum revision, developing 80+ literacy resources contributing to an average of 1.5 grade-level gains in reading outcomes for students.</li>
             </ul>
           </div>
         </div>
+
       </div>
     </main>
   </div>
@@ -215,7 +212,7 @@
     <div class="resume-embed-wrap">
       <iframe src="jhanavi_sankar_resume.pdf" title="Resume"></iframe>
     </div>
-    <p style="margin-top:16px;font-size:.82rem;color:var(--muted)">If the PDF doesn't render, <a href="jsankar_resume_bcg.pdf" target="_blank" style="color:var(--accent)">open it here</a>.</p>
+    <p style="margin-top:16px;font-size:.82rem;color:var(--muted)">If the PDF doesn't render, <a href="jhanavi_sankar_resume.pdf" target="_blank" style="color:var(--accent)">open it here</a>.</p>
   </div>
 </div>
 
@@ -260,7 +257,7 @@
 
     <div class="psec-title">📄 Policy Memos & Documents</div>
 
-    <a class="doc-card" href="jhanavi_sankar_resume" target="_blank">
+    <a class="doc-card" href="jhanavi_sankar_resume.pdf" target="_blank">
       <div class="doc-icon">📑</div>
       <div class="doc-body">
         <div class="doc-title">Full Resume — Jhanavi Sankar</div>
@@ -268,102 +265,87 @@
       </div>
       <div class="doc-arrow">↗</div>
     </a>
+    <a class="doc-card" href="Operationalizing%20AI%20Project%20(healthcare).pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Policy Memo — AI in Healthcare Governance</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="Shenzen's%20Public%20Security%20System%20Report.pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Case Memo — Shenzhen Public Security AI System</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="Financing%20Equity%20in%20Education.pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Policy Analysis — Financing Equity in Education</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="Environmental%20Policy_%20System's%20Synthesis.pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">System's Analysis — Tariff Strategies and Access to Clean Tech</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="Critical%20Analysis%20of%20Policy%20Research%20Final%20Report.pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Critical Analysis of Policy Research — Effectiveness of College Interventions</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="Poverty%20Reduction%20Policy%20Memo.pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Policy Memo — Poverty Reduction Strategies and Social Policies</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="China-US%20Relations%20Policy%20Memo.pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Policy Memo — Examining U.S.-China Relations</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="US-Ghana-China%20Relations%20(Policy%20Memo).pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Policy Memo — Assessing U.S.-Ghana-China Relations</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="Improving%20Vaccination%20Rates_%20Behavioral%20Economics%20Perspectives.pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Thought Piece — Vaccination Rates Using a Behavioral Economics Perspective</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
+    <a class="doc-card" href="Advancing%20Renewable%20Energy%20Policy%20Memo.pdf" target="_blank">
+      <div class="doc-icon">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">Policy Memo — Advancing Renewable Energy Policies in South East Asia</div>
+        <div class="doc-sub">CMU Heinz College</div>
+      </div>
+      <div class="doc-arrow">↗</div>
+    </a>
 
-    <!-- Copy and activate these cards by setting href="your-memo.pdf" -->
-   <a class="doc-card" href="Operationalizing%20AI%20Project%20(healthcare).pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Policy Memo — AI in Healthcare Governance</div>
-    <div class="doc-sub">Operationalizing AI Project (healthcare).pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="Shenzen's%20Public%20Security%20System%20Report.pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Case Memo — Shenzhen Public Security AI System</div>
-    <div class="doc-sub">Shenzen's Public Security System Report.pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="Financing%20Equity%20in%20Education.pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Policy Analysis — Financing Equity in Education</div>
-    <div class="doc-sub">Financing Equity in Education.pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="Environmental%20Policy_%20System's%20Synthesis.pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">System's Analysis — Tariff Strategies and Access to Clean Tech</div>
-    <div class="doc-sub">Environmental Policy_ System's Synthesis.pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="Critical%20Analysis%20of%20Policy%20Research%20Final%20Report.pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Critical Analysis of Policy Research — Examining the Effectiveness of College Interventions</div>
-    <div class="doc-sub">Critical Analysis of Policy Research Final Report.pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="Poverty%20Reduction%20Policy Memo.pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Policy Memo — Poverty Reduction Strategies and Social Policies</div>
-    <div class="doc-sub">Poverty Reduction Policy Memo.pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="China-US%20Relations%20Policy%20Memo.pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Policy Memo — Examining U.S.-China Relations</div>
-    <div class="doc-sub">China-US Relations Policy Memo.pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="US-Ghana-China%20Relations%20(Policy Memo).pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Policy Memo — Assessing U.S.-Ghana-China Relations</div>
-    <div class="doc-sub">US-Ghana-China Relations (Policy Memo).pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="Improving%20Vaccination Rates_%20Behavioral%20Economics%20Perspectives.pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Thought Piece — Examining Vaccination Rates Using a Behavioral Economics Perspective</div>
-    <div class="doc-sub">Improving Vaccination Rates_ Behavioral Economics Perspectives.pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-
-<a class="doc-card" href="Advancing%20Renewable%20Energy%20Policy%20Memo.pdf" target="_blank">
-  <div class="doc-icon">📝</div>
-  <div class="doc-body">
-    <div class="doc-title">Policy Memo — Advancing Renewable Energy Policies in South East Asia</div>
-    <div class="doc-sub">Advancing Renewable Energy Policy Memo.pdf · CMU Heinz</div>
-  </div>
-  <div class="doc-arrow">↗</div>
-</a>
-    
-
-    
-
-    <p class="hint">💡 To activate grayed cards: upload the PDF to your GitHub repo and update the <code>href</code> value in <code>index.html</code>.</p>
   </div>
 </div>
 
